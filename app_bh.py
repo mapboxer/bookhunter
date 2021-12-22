@@ -53,7 +53,7 @@ def sand_email_to(link, sender_email, password, receiver_email):
     choise = st.radio('Выберите действие: ', ['Не отправлять письмо', 'Отправить письмо'])
     st.write('-' * 25)
     if choise == 'Отправить письмо':
-       try:
+#        try:
             msg = EmailMessage()
             msg.set_content(message)
             msg['Subject'] = f'Автоматическое уведомление'
@@ -68,8 +68,8 @@ def sand_email_to(link, sender_email, password, receiver_email):
 
             st.subheader('Письмо отправлено.')
             st.write('-' * 25)
-        except 'SMTPAuthenticationError':
-            st.subheader("Проверьте предоставлен ли доступ сторонним приложениям к вашему аккаунту электронной почты и корректно ли заполнены поля отправителя, пароля и адресата.")
+#         except 'SMTPAuthenticationError':
+#             st.subheader("Проверьте предоставлен ли доступ сторонним приложениям к вашему аккаунту электронной почты и корректно ли заполнены поля отправителя, пароля и адресата.")
             st.write('-' * 25)
 
 
