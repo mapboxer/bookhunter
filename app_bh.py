@@ -117,7 +117,7 @@ if len(links) > 0:
                 receiver_email = st.text_input('Кому:')
                 sand_email_to(df[0][x], sender_email, password, receiver_email)
 
-
+ 
 
 
 
