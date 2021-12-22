@@ -62,7 +62,8 @@ def sand_email_to(link, sender_email, password, receiver_email):
             s = smtplib.SMTP('smtp.gmail.com', 587)
             s.starttls()
             s.login(sender_email, password)
-            s.send_message(msg)
+            #s.send_message(msg)
+            s.sendmail(msg)
             s.quit()
 
             st.subheader('Письмо отправлено.')
